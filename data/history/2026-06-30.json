@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "generated_at": "2026-08-11T22:39:34.754671+00:00",
+  "generated_at": "2026-08-12T22:37:56.374994+00:00",
   "methodology_version": "1.0",
   "parameters": {
     "srisk_k": 0.08,
@@ -18,11 +18,11 @@
       "region": "GB",
       "covar_index": "^FTSE",
       "mes": -0.02922,
-      "lrmes": 0.61326,
+      "lrmes": 0.613259,
       "covar": -0.015765,
       "delta_covar": -0.007596,
-      "covar_beta": 0.251174,
-      "srisk_usd_bn": 44.518046,
+      "covar_beta": 0.251173,
+      "srisk_usd_bn": 44.518042,
       "market_cap_usd_bn": 33.922006,
       "debt_usd_bn": 707.3442,
       "srisk_share_pct": 100.0,
