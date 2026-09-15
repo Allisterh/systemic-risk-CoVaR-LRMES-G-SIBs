@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "generated_at": "2026-09-15T00:16:37.743659+00:00",
+  "generated_at": "2026-09-15T23:58:20.489429+00:00",
   "methodology_version": "1.0",
   "parameters": {
     "srisk_k": 0.08,
@@ -37,7 +37,7 @@
       "covar": -0.017795,
       "delta_covar": -0.008457,
       "covar_beta": 0.32821,
-      "srisk_usd_bn": 111.666585,
+      "srisk_usd_bn": 111.666602,
       "market_cap_usd_bn": 192.295014,
       "debt_usd_bn": 2311.162323,
       "srisk_share_pct": 47.9766,
@@ -55,7 +55,7 @@
       "srisk_usd_bn": 43.007367,
       "market_cap_usd_bn": 35.839323,
       "debt_usd_bn": 696.984639,
-      "srisk_share_pct": 18.4778,
+      "srisk_share_pct": 18.4777,
       "bank_id": "STAN"
     }
   ]
