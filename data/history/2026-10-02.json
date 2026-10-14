@@ -1,6 +1,6 @@
 {
   "date": "2026-10-02",
-  "generated_at": "2026-10-13T02:50:55.951143+00:00",
+  "generated_at": "2026-10-14T00:51:43.785393+00:00",
   "methodology_version": "1.0",
   "parameters": {
     "srisk_k": 0.08,
@@ -10,7 +10,7 @@
     "lrmes_market_drop": 0.4,
     "mes_tail_pct": 0.05
   },
-  "system_srisk_usd_bn": 3434.5103,
+  "system_srisk_usd_bn": 3436.6816,
   "bank_count": 28,
   "banks": [
     {
@@ -22,10 +22,10 @@
       "covar": -0.024225,
       "delta_covar": -0.007986,
       "covar_beta": 0.269533,
-      "srisk_usd_bn": 451.640518,
+      "srisk_usd_bn": 451.640519,
       "market_cap_usd_bn": 173.90706,
       "debt_usd_bn": 7118.208727,
-      "srisk_share_pct": 13.1501,
+      "srisk_share_pct": 13.1418,
       "bank_id": "ABC"
     },
     {
@@ -36,11 +36,11 @@
       "lrmes": 0.40651,
       "covar": -0.024593,
       "delta_covar": -0.013553,
-      "covar_beta": 0.560462,
-      "srisk_usd_bn": 182.312213,
-      "market_cap_usd_bn": 57.619478,
+      "covar_beta": 0.560464,
+      "srisk_usd_bn": 183.410348,
+      "market_cap_usd_bn": 55.608265,
       "debt_usd_bn": 2672.163338,
-      "srisk_share_pct": 5.3082,
+      "srisk_share_pct": 5.3368,
       "bank_id": "ACA"
     },
     {
@@ -52,10 +52,10 @@
       "covar": -0.018513,
       "delta_covar": -0.00815,
       "covar_beta": 0.298809,
-      "srisk_usd_bn": 24.78631,
+      "srisk_usd_bn": 24.786236,
       "market_cap_usd_bn": 375.860225,
       "debt_usd_bn": 3195.518,
-      "srisk_share_pct": 0.7217,
+      "srisk_share_pct": 0.7212,
       "bank_id": "BAC"
     },
     {
@@ -66,11 +66,11 @@
       "lrmes": 0.588917,
       "covar": -0.01925,
       "delta_covar": -0.01088,
-      "covar_beta": 0.319188,
-      "srisk_usd_bn": 83.071362,
-      "market_cap_usd_bn": 44.857633,
+      "covar_beta": 0.319189,
+      "srisk_usd_bn": 83.090112,
+      "market_cap_usd_bn": 44.808061,
       "debt_usd_bn": 1250.454423,
-      "srisk_share_pct": 2.4187,
+      "srisk_share_pct": 2.4177,
       "bank_id": "BARC"
     },
     {
@@ -82,10 +82,10 @@
       "covar": -0.022249,
       "delta_covar": -0.012556,
       "covar_beta": 0.452187,
-      "srisk_usd_bn": 14.849864,
-      "market_cap_usd_bn": 146.827084,
+      "srisk_usd_bn": 15.891896,
+      "market_cap_usd_bn": 144.51927,
       "debt_usd_bn": 1014.325567,
-      "srisk_share_pct": 0.4324,
+      "srisk_share_pct": 0.4624,
       "bank_id": "BBVA"
     },
     {
@@ -100,7 +100,7 @@
       "srisk_usd_bn": 210.208262,
       "market_cap_usd_bn": 113.508558,
       "debt_usd_bn": 3313.503193,
-      "srisk_share_pct": 6.1205,
+      "srisk_share_pct": 6.1166,
       "bank_id": "BNP"
     },
     {
@@ -115,7 +115,7 @@
       "srisk_usd_bn": 338.287758,
       "market_cap_usd_bn": 149.66988,
       "debt_usd_bn": 5510.62197,
-      "srisk_share_pct": 9.8497,
+      "srisk_share_pct": 9.8434,
       "bank_id": "BOC"
     },
     {
@@ -130,7 +130,7 @@
       "srisk_usd_bn": 137.971714,
       "market_cap_usd_bn": 56.992351,
       "debt_usd_bn": 2230.776671,
-      "srisk_share_pct": 4.0172,
+      "srisk_share_pct": 4.0147,
       "bank_id": "BOCOM"
     },
     {
@@ -145,7 +145,7 @@
       "srisk_usd_bn": 123.857909,
       "market_cap_usd_bn": 53.439607,
       "debt_usd_bn": 1792.038468,
-      "srisk_share_pct": 3.6063,
+      "srisk_share_pct": 3.604,
       "bank_id": "BPCE"
     },
     {
@@ -153,14 +153,14 @@
       "region": "US",
       "covar_index": "^GSPC",
       "mes": -0.026336,
-      "lrmes": 0.525803,
+      "lrmes": 0.525804,
       "covar": -0.020459,
       "delta_covar": -0.009781,
-      "covar_beta": 0.315317,
-      "srisk_usd_bn": 120.380002,
+      "covar_beta": 0.315316,
+      "srisk_usd_bn": 120.380043,
       "market_cap_usd_bn": 215.550627,
       "debt_usd_bn": 2680.204,
-      "srisk_share_pct": 3.505,
+      "srisk_share_pct": 3.5028,
       "bank_id": "C"
     },
     {
@@ -175,7 +175,7 @@
       "srisk_usd_bn": 389.593312,
       "market_cap_usd_bn": 196.12796,
       "debt_usd_bn": 6487.346654,
-      "srisk_share_pct": 11.3435,
+      "srisk_share_pct": 11.3363,
       "bank_id": "CCB"
     },
     {
@@ -190,7 +190,7 @@
       "srisk_usd_bn": 101.996514,
       "market_cap_usd_bn": 65.402476,
       "debt_usd_bn": 1621.211604,
-      "srisk_share_pct": 2.9698,
+      "srisk_share_pct": 2.9679,
       "bank_id": "DBK"
     },
     {
@@ -205,7 +205,7 @@
       "srisk_usd_bn": 123.857909,
       "market_cap_usd_bn": 53.439607,
       "debt_usd_bn": 1792.038468,
-      "srisk_share_pct": 3.6063,
+      "srisk_share_pct": 3.604,
       "bank_id": "GLE"
     },
     {
@@ -213,14 +213,14 @@
       "region": "US",
       "covar_index": "^GSPC",
       "mes": -0.028527,
-      "lrmes": 0.556084,
+      "lrmes": 0.556085,
       "covar": -0.020032,
       "delta_covar": -0.009584,
-      "covar_beta": 0.294646,
-      "srisk_usd_bn": 53.06954,
+      "covar_beta": 0.294647,
+      "srisk_usd_bn": 53.069546,
       "market_cap_usd_bn": 262.799665,
       "debt_usd_bn": 2004.969,
-      "srisk_share_pct": 1.5452,
+      "srisk_share_pct": 1.5442,
       "bank_id": "GS"
     },
     {
@@ -232,10 +232,10 @@
       "covar": -0.018354,
       "delta_covar": -0.008805,
       "covar_beta": 0.328201,
-      "srisk_usd_bn": 120.827084,
+      "srisk_usd_bn": 120.827092,
       "market_cap_usd_bn": 186.832814,
       "debt_usd_bn": 2455.442239,
-      "srisk_share_pct": 3.518,
+      "srisk_share_pct": 3.5158,
       "bank_id": "HSBC"
     },
     {
@@ -247,10 +247,10 @@
       "covar": -0.026183,
       "delta_covar": -0.009272,
       "covar_beta": 0.403987,
-      "srisk_usd_bn": 489.045348,
+      "srisk_usd_bn": 489.045377,
       "market_cap_usd_bn": 204.31544,
       "debt_usd_bn": 7862.591713,
-      "srisk_share_pct": 14.2392,
+      "srisk_share_pct": 14.2302,
       "bank_id": "ICBC"
     },
     {
@@ -262,10 +262,10 @@
       "covar": -0.02119,
       "delta_covar": -0.011442,
       "covar_beta": 0.435946,
-      "srisk_usd_bn": 51.091775,
+      "srisk_usd_bn": 51.091791,
       "market_cap_usd_bn": 97.550424,
       "debt_usd_bn": 1248.02902,
-      "srisk_share_pct": 1.4876,
+      "srisk_share_pct": 1.4867,
       "bank_id": "ING"
     },
     {
@@ -276,7 +276,7 @@
       "lrmes": 0.386032,
       "covar": -0.017243,
       "delta_covar": -0.004991,
-      "covar_beta": 0.197512,
+      "covar_beta": 0.197513,
       "srisk_usd_bn": 0.0,
       "market_cap_usd_bn": 879.141949,
       "debt_usd_bn": 4640.471,
@@ -295,7 +295,7 @@
       "srisk_usd_bn": 76.648762,
       "market_cap_usd_bn": 129.45508,
       "debt_usd_bn": 1853.364703,
-      "srisk_share_pct": 2.2317,
+      "srisk_share_pct": 2.2303,
       "bank_id": "MFG"
     },
     {
@@ -325,7 +325,7 @@
       "srisk_usd_bn": 48.304039,
       "market_cap_usd_bn": 252.587775,
       "debt_usd_bn": 2594.435336,
-      "srisk_share_pct": 1.4064,
+      "srisk_share_pct": 1.4055,
       "bank_id": "MUFG"
     },
     {
@@ -337,10 +337,10 @@
       "covar": -0.020003,
       "delta_covar": -0.011044,
       "covar_beta": 0.388358,
-      "srisk_usd_bn": 91.033269,
+      "srisk_usd_bn": 91.033286,
       "market_cap_usd_bn": 192.048439,
       "debt_usd_bn": 2068.362012,
-      "srisk_share_pct": 2.6505,
+      "srisk_share_pct": 2.6489,
       "bank_id": "SAN"
     },
     {
@@ -352,10 +352,10 @@
       "covar": -0.037334,
       "delta_covar": -0.014971,
       "covar_beta": 0.441448,
-      "srisk_usd_bn": 62.479766,
+      "srisk_usd_bn": 62.479757,
       "market_cap_usd_bn": 158.276224,
       "debt_usd_bn": 1970.713419,
-      "srisk_share_pct": 1.8192,
+      "srisk_share_pct": 1.818,
       "bank_id": "SMFG"
     },
     {
@@ -367,10 +367,10 @@
       "covar": -0.017012,
       "delta_covar": -0.008223,
       "covar_beta": 0.269834,
-      "srisk_usd_bn": 42.671849,
-      "market_cap_usd_bn": 36.042943,
+      "srisk_usd_bn": 42.684198,
+      "market_cap_usd_bn": 36.011487,
       "debt_usd_bn": 710.259858,
-      "srisk_share_pct": 1.2424,
+      "srisk_share_pct": 1.242,
       "bank_id": "STAN"
     },
     {
@@ -382,10 +382,10 @@
       "covar": -0.019372,
       "delta_covar": -0.008258,
       "covar_beta": 0.281318,
-      "srisk_usd_bn": 5.516688,
+      "srisk_usd_bn": 5.516693,
       "market_cap_usd_bn": 48.336524,
       "debt_usd_bn": 390.113,
-      "srisk_share_pct": 0.1606,
+      "srisk_share_pct": 0.1605,
       "bank_id": "STT"
     },
     {
@@ -400,7 +400,7 @@
       "srisk_usd_bn": 48.230045,
       "market_cap_usd_bn": 100.519595,
       "debt_usd_bn": 1343.676263,
-      "srisk_share_pct": 1.4043,
+      "srisk_share_pct": 1.4034,
       "bank_id": "UBS"
     },
     {
@@ -415,7 +415,7 @@
       "srisk_usd_bn": 22.372791,
       "market_cap_usd_bn": 133.763182,
       "debt_usd_bn": 968.92226,
-      "srisk_share_pct": 0.6514,
+      "srisk_share_pct": 0.651,
       "bank_id": "UCG"
     },
     {
@@ -430,7 +430,7 @@
       "srisk_usd_bn": 20.405654,
       "market_cap_usd_bn": 243.280737,
       "debt_usd_bn": 2099.878,
-      "srisk_share_pct": 0.5941,
+      "srisk_share_pct": 0.5938,
       "bank_id": "WFC"
     }
   ]
