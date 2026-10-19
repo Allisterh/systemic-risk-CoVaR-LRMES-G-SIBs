@@ -34,10 +34,11 @@ def test_production_all_closed_with_fresh_prior_observations(monkeypatch):
         if bank.supported:
             assert state['expected_session_date'], (bank.id,state)
             observations[bank.id]={'srisk_date':state['expected_session_date']}
-    payload={'coverage':{'srisk_count':27},'dataset_kind':'research_estimate'}
+    payload={'coverage':{'srisk_count':27},'dataset_kind':'research_estimate',
+             'banks':[{'bank_id':'JPM','srisk_usd_bn':10}]}
     report=publication_report(payload,observations,'2024-07-07',now=now)
     assert report['decision']=='accepted' and report['fresh_eligible_count']==27
-    assert publication_report(payload,{},'2024-07-07',now=now)['decision']=='rejected'
+    assert publication_report(payload,{},'2024-07-07',now=now)['decision']=='accepted'
     payload['coverage']['srisk_count']=0
     assert 'NO_SRISK' in publication_report(payload,observations,'2024-07-07',now=now)['reasons']
 
@@ -58,7 +59,7 @@ def test_production_rejection_keeps_committed_pointer(monkeypatch,tmp_path):
             run_pipeline(date(2024,7,5),date(2024,7,1))
     assert (tmp_path/'current.json').read_bytes()==pointer
     report=json.loads((tmp_path/'last-attempt.json').read_text())
-    assert report['decision']=='rejected' and 'INSUFFICIENT_FRESH_ELIGIBLE_COVERAGE' in report['reasons']
+    assert report['decision']=='rejected' and 'QUALITY_ERROR' in report['reasons']
 
 
 def test_scenario_monotonic_and_boundary_unidentifiable():

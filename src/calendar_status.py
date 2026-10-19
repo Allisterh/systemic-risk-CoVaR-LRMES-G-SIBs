@@ -80,12 +80,28 @@ def publication_report(payload, observations, target_date, *, now=None):
     eligible = [b.id for b in BANKS if b.supported]
     ready = [bid for bid in eligible if states[bid].get('up_to_date')]
     reasons = []
+    warnings = []
     if not 0 < cfg.min_publication_coverage <= 1:
         raise ValueError('MIN_PUBLICATION_COVERAGE must be in (0,1]')
     if cfg.publication_basis == 'market_metrics':
         ready = [bid for bid in eligible if all(metric_status[m][bid].get('up_to_date') for m in ('mes','lrmes','covar','delta_covar'))]
     elif not payload.get('coverage', {}).get('srisk_count'): reasons.append('NO_SRISK')
-    if len(ready)/len(eligible) < cfg.min_publication_coverage: reasons.append('INSUFFICIENT_FRESH_ELIGIBLE_COVERAGE')
+    # Coverage is advisory; valid partial/stale observations remain publishable.
+    ratio = len(ready)/len(eligible) if eligible else 0.0
+    if ratio < cfg.min_publication_coverage:
+        warnings.append('INSUFFICIENT_FRESH_ELIGIBLE_COVERAGE')
+    metrics = ('mes','lrmes','covar','delta_covar') if cfg.publication_basis == 'market_metrics' else ('srisk_usd_bn',)
+    valid_ids = sorted({bank.get('bank_id') for bank in payload.get('banks', [])
+        if bank.get('bank_id') in eligible and any(
+            isinstance(bank.get(m), (int, float)) and not isinstance(bank.get(m), bool)
+            and math.isfinite(bank[m]) for m in metrics)})
+    if not valid_ids:
+        reasons.append('NO_VALID_METRICS')
+    for by_bank in metric_status.values():
+        for state in by_bank.values():
+            state['as_of'] = state['observation_date']
+            state['freshness'] = ('unavailable' if not state['observation_date'] else
+                                  'fresh' if state.get('up_to_date') else 'stale')
     if payload.get('dataset_kind') in ('historical_reconstruction','synthetic_test'): reasons.append('NON_PRODUCTION_DATASET')
     if target_date > current_day: reasons.append('FUTURE_TARGET')
     if any(a.get('severity') == 'error' for a in payload.get('quality',{}).get('alerts',[])):
@@ -95,5 +111,9 @@ def publication_report(payload, observations, target_date, *, now=None):
             'metric_status':metric_status,
             'fresh_count_by_metric':{m:sum(bool(s.get('up_to_date')) for s in by_bank.values()) for m,by_bank in metric_status.items()},
             'eligible_count':len(eligible), 'minimum_ratio':cfg.min_publication_coverage,
-            'bank_status':states, 'reasons':reasons,
+            'bank_status':states, 'reasons':reasons, 'warnings':warnings,
+            'coverage_policy':'advisory', 'fresh_coverage_ratio':ratio,
+            'data_status':'complete' if len(ready)==len(eligible) and eligible else 'partial',
+            'valid_snapshot_ids':valid_ids,
+            'not_fresh_ids':sorted(set(eligible)-set(ready)),
             'decision':'rejected' if reasons and cfg.publication_mode=='production' else 'accepted'}
