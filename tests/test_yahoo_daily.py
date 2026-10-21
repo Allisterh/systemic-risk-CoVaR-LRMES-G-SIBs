@@ -84,12 +84,17 @@ def test_market_metrics_can_publish_without_srisk_but_not_without_prices(daily,m
             day=session_status(bank,'2026-10-07',now=NOW)['expected_session_date']
             observations[bank.id]={'metric_dates':{m:day for m in ('mes','lrmes','covar','delta_covar')}}
     payload={'date':'2026-10-06','fundamentals_policy':'yahoo_daily','dataset_kind':'research_estimate',
-             'coverage':{'srisk_count':0,'expected_count':29},'banks':[]}
+             'coverage':{'srisk_count':0,'expected_count':29},
+             'banks':[{'bank_id':'JPM','mes':-.01,'lrmes':.3,'covar':-.02,'delta_covar':-.005}]}
     payload['quality']=assess_quality(payload,today=NOW.date())
     report=publication_report(payload,observations,'2026-10-07',now=NOW)
     assert report['decision']=='accepted'
     assert report['fresh_count_by_metric']['srisk_usd_bn']==0
-    assert publication_report(payload,{},'2026-10-07',now=NOW)['decision']=='rejected'
+    assert publication_report(payload,{},'2026-10-07',now=NOW)['decision']=='accepted'
+    payload['banks']=[]
+    empty=publication_report(payload,observations,'2026-10-07',now=NOW)
+    assert empty['decision']=='rejected'
+    assert 'NO_VALID_METRICS' in empty['reasons']
 
 
 def test_optional_fundamentals_failure_keeps_calculated_market_metrics(daily,monkeypatch,tmp_path):
