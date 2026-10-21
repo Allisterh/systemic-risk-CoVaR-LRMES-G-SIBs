@@ -1,0 +1,3 @@
+date,methodology_version,calibration_id,dataset_kind,mes,lrmes,covar,delta_covar,covar_beta,srisk_usd_bn,srisk_share_pct,market_cap_usd_bn,debt_usd_bn
+2026-10-16,2.0-beta-scenario,19ef0c617fe676c5,research_estimate,-0.011941,0.311926,-0.020504,-0.010804,0.544779,0.0,0.0,195.89205,1398.428865
+2026-10-20,2.0-beta-scenario,19ef0c617fe676c5,research_estimate,-0.011941,0.309073,-0.020474,-0.010663,0.544789,0.0,0.0,198.794295,1407.163282
